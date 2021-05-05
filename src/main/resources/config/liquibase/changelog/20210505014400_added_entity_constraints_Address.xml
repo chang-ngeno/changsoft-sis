@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity Address.
+    -->
+    <changeSet id="20210505014400-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="student_id"
+                                 baseTableName="address"
+                                 constraintName="fk_address__student_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="student"/>
+
+        <addForeignKeyConstraint baseColumnNames="employee_id"
+                                 baseTableName="address"
+                                 constraintName="fk_address__employee_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
+        <addForeignKeyConstraint baseColumnNames="next_of_kin_id"
+                                 baseTableName="address"
+                                 constraintName="fk_address__next_of_kin_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="next_of_kin"/>
+    </changeSet>
+</databaseChangeLog>

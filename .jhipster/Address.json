@@ -1,0 +1,69 @@
+{
+  "name": "Address",
+  "fields": [
+    {
+      "fieldName": "houseNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "streetAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "county",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "district",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "cityTown",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "postalCode",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "student",
+      "otherEntityRelationshipName": "address",
+      "relationshipName": "student",
+      "otherEntityField": "studentRegNumber"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "address",
+      "relationshipName": "employee",
+      "otherEntityField": "staffSysNo"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "nextOfKin",
+      "otherEntityRelationshipName": "address",
+      "relationshipName": "nextOfKin",
+      "otherEntityField": "firstName"
+    }
+  ],
+  "entityTableName": "address",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210505014400"
+}

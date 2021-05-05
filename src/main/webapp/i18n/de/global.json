@@ -7,6 +7,13 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entitäten",
+        "student": "Student",
+        "employee": "Employee",
+        "category": "Category",
+        "item": "Item",
+        "address": "Address",
+        "contact": "Contact",
+        "nextOfKin": "Next Of Kin",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

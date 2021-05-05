@@ -1,0 +1,95 @@
+{
+  "name": "Employee",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "middleName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "studentRegNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dateOfBirth",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "staffSysNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "regDocType",
+      "fieldType": "RegistrationDocumentType",
+      "fieldValues": "PASSPORT (Passport),NATIONAL_ID (NationalId),HUDUMA (Huduma),BIRTH_CERTIFICATE (BirthCertificate)",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "registrationDocumentNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "gender",
+      "fieldType": "Gender",
+      "fieldValues": "MALE (Male),FEMALE (Female),OTHER (Other)",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nationality",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateJoined",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "wxtJwtPq55wd",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "nextOfKin",
+      "otherEntityRelationshipName": "employee",
+      "relationshipValidateRules": "required",
+      "relationshipName": "relative",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "contact",
+      "otherEntityRelationshipName": "employee",
+      "relationshipName": "contact"
+    }
+  ],
+  "entityTableName": "employee",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210505014357"
+}

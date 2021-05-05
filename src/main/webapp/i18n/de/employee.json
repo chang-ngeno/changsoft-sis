@@ -1,0 +1,38 @@
+{
+  "changsoftSisApp": {
+    "employee": {
+      "home": {
+        "title": "Employees",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Employee erstellen",
+        "createOrEditLabel": "Employee erstellen oder bearbeiten",
+        "notFound": "Keine Employees gefunden"
+      },
+      "created": "Employee erstellt mit ID {{ param }}",
+      "updated": "Employee aktualisiert mit ID {{ param }}",
+      "deleted": "Employee gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Employee {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Employee"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "middleName": "Middle Name",
+      "lastName": "Last Name",
+      "studentRegNumber": "Student Reg Number",
+      "dateOfBirth": "Date Of Birth",
+      "staffSysNo": "Staff Sys No",
+      "regDocType": "Reg Doc Type",
+      "registrationDocumentNumber": "Registration Document Number",
+      "gender": "Gender",
+      "nationality": "Nationality",
+      "dateJoined": "Date Joined",
+      "deleted": "Deleted",
+      "wxtJwtPq55wd": "Wxt Jwt Pq 55 Wd",
+      "relative": "Relative",
+      "contact": "Contact"
+    }
+  }
+}

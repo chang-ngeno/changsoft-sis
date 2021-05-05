@@ -1,0 +1,37 @@
+{
+  "changsoftSisApp": {
+    "nextOfKin": {
+      "home": {
+        "title": "Next Of Kins",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Next Of Kin erstellen",
+        "createOrEditLabel": "Next Of Kin erstellen oder bearbeiten",
+        "notFound": "Keine Next Of Kins gefunden"
+      },
+      "created": "Next Of Kin erstellt mit ID {{ param }}",
+      "updated": "Next Of Kin aktualisiert mit ID {{ param }}",
+      "deleted": "Next Of Kin gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Next Of Kin {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Next Of Kin"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "middleName": "Middle Name",
+      "lastName": "Last Name",
+      "dateOfBirth": "Date Of Birth",
+      "regDocType": "Reg Doc Type",
+      "registrationDocumentNumber": "Registration Document Number",
+      "gender": "Gender",
+      "nationality": "Nationality",
+      "deleted": "Deleted",
+      "wxtJwtPq55wd": "Wxt Jwt Pq 55 Wd",
+      "relation": "Relation",
+      "contact": "Contact",
+      "employee": "Employee",
+      "student": "Student"
+    }
+  }
+}

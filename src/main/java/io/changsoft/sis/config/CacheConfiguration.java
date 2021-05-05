@@ -51,6 +51,24 @@ public class CacheConfiguration {
             createCache(cm, io.changsoft.sis.domain.User.class.getName());
             createCache(cm, io.changsoft.sis.domain.Authority.class.getName());
             createCache(cm, io.changsoft.sis.domain.User.class.getName() + ".authorities");
+            createCache(cm, io.changsoft.sis.domain.Student.class.getName());
+            createCache(cm, io.changsoft.sis.domain.Student.class.getName() + ".relatives");
+            createCache(cm, io.changsoft.sis.domain.Student.class.getName() + ".contacts");
+            createCache(cm, io.changsoft.sis.domain.Student.class.getName() + ".addresses");
+            createCache(cm, io.changsoft.sis.domain.Employee.class.getName());
+            createCache(cm, io.changsoft.sis.domain.Employee.class.getName() + ".relatives");
+            createCache(cm, io.changsoft.sis.domain.Employee.class.getName() + ".contacts");
+            createCache(cm, io.changsoft.sis.domain.Employee.class.getName() + ".addresses");
+            createCache(cm, io.changsoft.sis.domain.Category.class.getName());
+            createCache(cm, io.changsoft.sis.domain.Category.class.getName() + ".items");
+            createCache(cm, io.changsoft.sis.domain.Item.class.getName());
+            createCache(cm, io.changsoft.sis.domain.Address.class.getName());
+            createCache(cm, io.changsoft.sis.domain.Contact.class.getName());
+            createCache(cm, io.changsoft.sis.domain.NextOfKin.class.getName());
+            createCache(cm, io.changsoft.sis.domain.NextOfKin.class.getName() + ".contacts");
+            createCache(cm, io.changsoft.sis.domain.NextOfKin.class.getName() + ".addresses");
+            createCache(cm, io.changsoft.sis.domain.NextOfKin.class.getName() + ".employees");
+            createCache(cm, io.changsoft.sis.domain.NextOfKin.class.getName() + ".students");
             // jhipster-needle-ehcache-add-entry
         };
     }

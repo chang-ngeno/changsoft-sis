@@ -1,0 +1,37 @@
+{
+  "changsoftSisApp": {
+    "student": {
+      "home": {
+        "title": "Students",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Student",
+        "createOrEditLabel": "Crear o editar Student",
+        "notFound": "Ningún Students encontrado"
+      },
+      "created": "Un nuevo Student ha sido creado con el identificador {{ param }}",
+      "updated": "Un Student ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Student ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Student {{ id }}?"
+      },
+      "detail": {
+        "title": "Student"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "middleName": "Middle Name",
+      "lastName": "Last Name",
+      "studentRegNumber": "Student Reg Number",
+      "dateOfBirth": "Date Of Birth",
+      "regDocType": "Reg Doc Type",
+      "registrationDocumentNumber": "Registration Document Number",
+      "gender": "Gender",
+      "nationality": "Nationality",
+      "dateJoined": "Date Joined",
+      "deleted": "Deleted",
+      "wxtJwtPq55wd": "Wxt Jwt Pq 55 Wd",
+      "relative": "Relative",
+      "contact": "Contact"
+    }
+  }
+}

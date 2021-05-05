@@ -12,6 +12,34 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
+// prettier-ignore
+import student, {
+  StudentState
+} from 'app/entities/student/student.reducer';
+// prettier-ignore
+import employee, {
+  EmployeeState
+} from 'app/entities/employee/employee.reducer';
+// prettier-ignore
+import category, {
+  CategoryState
+} from 'app/entities/category/category.reducer';
+// prettier-ignore
+import item, {
+  ItemState
+} from 'app/entities/item/item.reducer';
+// prettier-ignore
+import address, {
+  AddressState
+} from 'app/entities/address/address.reducer';
+// prettier-ignore
+import contact, {
+  ContactState
+} from 'app/entities/contact/contact.reducer';
+// prettier-ignore
+import nextOfKin, {
+  NextOfKinState
+} from 'app/entities/next-of-kin/next-of-kin.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -25,6 +53,13 @@ export interface IRootState {
   readonly passwordReset: PasswordResetState;
   readonly password: PasswordState;
   readonly settings: SettingsState;
+  readonly student: StudentState;
+  readonly employee: EmployeeState;
+  readonly category: CategoryState;
+  readonly item: ItemState;
+  readonly address: AddressState;
+  readonly contact: ContactState;
+  readonly nextOfKin: NextOfKinState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -40,6 +75,13 @@ const rootReducer = combineReducers<IRootState>({
   passwordReset,
   password,
   settings,
+  student,
+  employee,
+  category,
+  item,
+  address,
+  contact,
+  nextOfKin,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar,
 });

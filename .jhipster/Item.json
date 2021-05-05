@@ -1,0 +1,51 @@
+{
+  "name": "Item",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "dateSince",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dateUpto",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "item",
+      "relationshipName": "category",
+      "otherEntityField": "name"
+    }
+  ],
+  "entityTableName": "item",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210505014359"
+}

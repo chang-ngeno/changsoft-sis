@@ -1,0 +1,11 @@
+{
+  "changsoftSisApp": {
+    "RegistrationDocumentType": {
+      "null": "",
+      "PASSPORT": "Passport",
+      "NATIONAL_ID": "NationalId",
+      "HUDUMA": "Huduma",
+      "BIRTH_CERTIFICATE": "BirthCertificate"
+    }
+  }
+}

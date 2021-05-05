@@ -1,0 +1,52 @@
+{
+  "name": "Contact",
+  "fields": [
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "mobileNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "contact",
+      "relationshipName": "employee",
+      "otherEntityField": "staffSysNo"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "nextOfKin",
+      "otherEntityRelationshipName": "contact",
+      "relationshipName": "nextOfKin",
+      "otherEntityField": "registrationDocumentNumber"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "student",
+      "otherEntityRelationshipName": "contact",
+      "relationshipName": "student",
+      "otherEntityField": "studentRegNumber"
+    }
+  ],
+  "entityTableName": "contact",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210505014401"
+}

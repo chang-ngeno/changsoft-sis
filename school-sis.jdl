@@ -1,0 +1,121 @@
+
+entity Student{
+	firstName String required
+    middleName String required
+    lastName String required
+    studentRegNumber String required
+    dateOfBirth Instant required
+    regDocType RegistrationDocumentType required
+	registrationDocumentNumber String required
+    gender Gender required
+    nationality String
+    dateJoined Instant required
+    deleted Boolean
+    wxtJwtPq55wd String
+}
+
+entity Employee{
+	firstName String required
+    middleName String required
+    lastName String required
+    studentRegNumber String required
+    dateOfBirth Instant required
+    staffSysNo String required
+    regDocType RegistrationDocumentType required
+    registrationDocumentNumber String required
+    gender Gender required
+    nationality String
+    dateJoined Instant required
+    deleted Boolean
+    wxtJwtPq55wd String
+}
+
+entity Category{
+	name String required
+    code String required
+    description TextBlob
+    deleted Boolean
+}
+
+/*
+ * This refers to item based on
+ * @Category entity
+ * @Example category is department and 
+ * @Item is the specific department(finance)
+ */
+entity Item{
+	name String required
+    code String required
+    description TextBlob
+    dateSince Instant
+    dateUpto Instant
+    deleted Boolean
+}
+
+entity Address {
+	houseNumber String
+    streetAddress String
+    county String required
+    district String required
+    cityTown String required
+    postalCode Integer
+    deleted Boolean
+}
+
+entity Contact{
+	email String required
+    mobileNumber String required
+    deleted Boolean
+}
+
+entity NextOfKin{
+	firstName String required
+    middleName String required
+    lastName String required
+    dateOfBirth Instant required
+    regDocType RegistrationDocumentType required
+    registrationDocumentNumber String required
+    gender Gender required
+    nationality String
+    deleted Boolean
+    wxtJwtPq55wd String
+	relation String required
+}
+
+enum EmployeeType{
+	TEACHER (Teacher),
+    CASUAL_SUPPORT_STAFF (CasualSupportStaff),
+    PERMANENT_SUPPORT_STAFF (PermanentSupportStaff)
+}
+
+enum RegistrationDocumentType{
+	PASSPORT (Passport),
+    NATIONAL_ID (NationalId),
+    HUDUMA (Huduma),
+    BIRTH_CERTIFICATE (BirthCertificate)
+}
+
+enum Gender{
+	MALE (Male),
+    FEMALE (Female),
+    OTHER (Other)
+}
+
+relationship ManyToOne{	
+	Item{category(name)} to Category{item(name)}
+	Contact{employee(staffSysNo)} to Employee{contact}
+    Contact{nextOfKin(registrationDocumentNumber)} to NextOfKin{contact}
+	Contact{student(studentRegNumber)} to Student{contact}
+	Address{student(studentRegNumber)} to Student
+    Address{employee(staffSysNo)} to Employee
+    Address{nextOfKin(firstName)} to NextOfKin
+}
+
+relationship ManyToMany{
+	Employee{relative required} to NextOfKin{employee}
+    Student{relative required} to NextOfKin{student}
+}
+
+paginate * with pagination
+service * with serviceImpl
+dto * with mapstruct
