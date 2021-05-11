@@ -4,7 +4,7 @@ services:
   changsoftsis-postgresql:
     image: postgres:13.2
     # volumes:
-    #   - ~/volumes/jhipster/changsoftSIS/postgresql/:/var/lib/postgresql/data/
+    # - ~/volumes/jhipster/changsoftSIS/postgresql/:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=changsoftSIS
       - POSTGRES_PASSWORD=

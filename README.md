@@ -1,6 +1,6 @@
-# changsoftSIS
+# Changsoft SIS
 
-This application was generated using JHipster 7.0.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v7.0.1](https://www.jhipster.tech/documentation-archive/v7.0.1).
+This is a Student Information Management System, Built by [Macoz Technologies](https://macoz.co.ke/)
 
 ## Development
 

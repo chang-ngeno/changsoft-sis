@@ -23,6 +23,26 @@ export const Brand = props => (
   </NavbarBrand>
 );
 
+export const Students = props => (
+  <NavItem>
+    <NavLink tag={Link} to="/students" className="d-flex align-items-center">
+      <FontAwesomeIcon icon="hand-spock" />
+      <span>
+        <Translate contentKey="global.menu.students">Students</Translate>
+      </span>
+    </NavLink>
+  </NavItem>
+);
+export const AboutUs = props => (
+  <NavItem>
+    <NavLink tag={Link} to="/about-us" className="d-flex align-items-center">
+      <FontAwesomeIcon icon="hand-spock" />
+      <span>
+        <Translate contentKey="global.menu.aboutUs">About Us</Translate>
+      </span>
+    </NavLink>
+  </NavItem>
+);
 export const Home = props => (
   <NavItem>
     <NavLink tag={Link} to="/" className="d-flex align-items-center">

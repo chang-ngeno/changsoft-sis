@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>changsoftSIS</title>
-    <meta name="description" content="Description for changsoftSIS" />
+    <meta name="description" content="Description for Changsoft SIS" />
     <meta name="google" content="notranslate" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#000000" />
@@ -114,18 +114,16 @@
         }
       }
     </script>
-    <!-- uncomment this for adding service worker
+    <!--     uncomment this for adding service worker-->
     <script>
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/service-worker.js')
-            .then(function () {
-              console.log('Service Worker Registered');
-            });
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/service-worker.js').then(function () {
+            console.log('Service Worker Registered');
+          });
         });
       }
     </script>
-    -->
     <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

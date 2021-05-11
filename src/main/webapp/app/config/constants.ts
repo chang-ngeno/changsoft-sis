@@ -9,6 +9,11 @@ export const SERVER_API_URL = process.env.SERVER_API_URL;
 export const AUTHORITIES = {
   ADMIN: 'ROLE_ADMIN',
   USER: 'ROLE_USER',
+  TEACHER: 'ROLE_TEACHER',
+  STUDENT: 'ROLE_STUDENT',
+  SUBADMIN: 'ROLE_SUBADMIN',
+  FINANCE: 'ROLE_FINANCE',
+  LIBRARY: 'ROLE_LIBRARY',
 };
 
 export const messages = {
@@ -22,3 +27,4 @@ export const APP_LOCAL_DATETIME_FORMAT = 'YYYY-MM-DDTHH:mm';
 export const APP_LOCAL_DATETIME_FORMAT_Z = 'YYYY-MM-DDTHH:mm Z';
 export const APP_WHOLE_NUMBER_FORMAT = '0,0';
 export const APP_TWO_DIGITS_AFTER_POINT_NUMBER_FORMAT = '0,0.[00]';
+export const APP_CURRENT_YEAR = 'YYYY';

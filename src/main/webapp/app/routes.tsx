@@ -1,3 +1,5 @@
+import Students from 'app/modules/students/students';
+import AboutUs from 'app/modules/about-us/about-us';
 import React from 'react';
 import { Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
@@ -29,6 +31,12 @@ const Routes = () => {
   return (
     <div className="view-routes">
       <Switch>
+        <ErrorBoundaryRoute path="/about-us" exact component={AboutUs} />
+        <PrivateRoute
+          path="/students"
+          component={Students}
+          hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.SUBADMIN, AUTHORITIES.TEACHER]}
+        />
         <ErrorBoundaryRoute path="/login" component={Login} />
         <ErrorBoundaryRoute path="/logout" component={Logout} />
         <ErrorBoundaryRoute path="/account/register" component={Register} />
@@ -37,6 +45,11 @@ const Routes = () => {
         <ErrorBoundaryRoute path="/account/reset/finish/:key?" component={PasswordResetFinish} />
         <PrivateRoute path="/admin" component={Admin} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
         <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+        <PrivateRoute
+          path="/students"
+          component={Students}
+          hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.SUBADMIN, AUTHORITIES.TEACHER]}
+        />
         <ErrorBoundaryRoute path="/" exact component={Home} />
         <PrivateRoute path="/" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />
         <ErrorBoundaryRoute component={PageNotFound} />

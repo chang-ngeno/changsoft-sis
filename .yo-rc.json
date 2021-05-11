@@ -37,7 +37,7 @@
     "skipFakeData": false,
     "entitySuffix": "",
     "dtoSuffix": "DTO",
-    "pages": [],
+    "pages": ["Home", "About Us", "Students", "Teachers", "Finance"],
     "creationTimestamp": 1620174123232,
     "jwtSecretKey": "MjQyZDdhYTE3YWQ4MmUzNDljYTBmNzVmM2ZkNDYxZGI5YWY3NDQ0YjIxM2M2MTUxNzFjZTM3ZWU3NzM5MDRmMGFlZGViYzA2ZDg4MDEyNzI2ZjhhODUwN2E0OTY2OTUxNDliM2E2YWFmZjc3NWE3NDUzYTQ0ZjQ0MDA0YzlmNTk=",
     "clientTheme": "none",
